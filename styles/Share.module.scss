@@ -1,0 +1,58 @@
+.sharePage{
+    background: #fff;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 33px 22px;
+    gap: 32px;
+    
+    .shareHeaderContainer {
+        
+        img {
+            margin: 0 auto 16px;
+            width: 50px;
+            aspect-ratio: 1;
+        }
+
+        .pageHeader {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            color: #000000;
+        }
+        
+        .headerSubtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #323131;
+        }
+    }
+
+    .shareLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+
+        .link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 49px;
+
+            p {
+                width: 100%;
+                flex-grow: 1;
+                align-items: center;
+            }
+        }
+    }
+}

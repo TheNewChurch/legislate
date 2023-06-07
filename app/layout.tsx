@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.scss'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -11,7 +11,8 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  backgroundImgUrl: String
 }) {
   return (
     <html lang="en">

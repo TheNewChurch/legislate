@@ -1,0 +1,145 @@
+@import url('https://fonts.cdnfonts.com/css/br-firma');
+:root {
+  --primary_color: #FFC533;
+  color: #222222;
+  
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'BR Firma';
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.container {
+   max-width: 500px;
+   width: 100%;
+   margin: 0 auto;
+   position: relative;
+   height: 100vh;
+
+   .imgBackground {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+   }
+
+   .imageWithLogo {
+      position: relative;
+        
+       .svg-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+       }
+   }
+}
+
+
+
+.btn {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  background: var(--primary_color);
+  color: #222222;
+  padding:12px 19px;
+  cursor: pointer;
+  border: none;
+
+  &.outline {
+    background:#fff;
+    border: 1px solid rgba(34, 34, 34, 0.3);
+  }
+}
+
+
+
+.text-white {
+  color: #fff;
+}
+
+.page-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+
+  &.blurBackground {
+    background: rgba(50, 49, 49, 0.3);
+    backdrop-filter: blur(2.5px);
+  }
+}
+
+.formGroup {
+   border: 1px solid #B0B0B0;
+   border-radius: 8px;
+   width: 100%;
+   padding: 12px;
+   display: flex;
+   flex-direction: column;
+
+   label {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      color: #717171;
+   }
+
+   input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+   }
+}
+
+.formHints {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #222222;
+ }

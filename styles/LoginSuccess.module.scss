@@ -1,0 +1,60 @@
+.loginSuccess {
+    padding: 30px 22px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+
+    .pageHeader{
+
+        img {
+            margin: 0 auto 16px;
+            width: 50px;
+            aspect-ratio: 1;
+        }
+
+        .pageHeader {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 150%;
+            text-align: center;
+            color: #000000;
+        }
+
+        .headerSubtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            word-wrap: none;
+            text-align: center;
+            color: #323131;
+        }
+    }
+
+    .pinContainer {
+        background: rgba(233, 175, 28, 0.05);
+        padding: 14px;
+        text-align: center;
+        width: calc(100% + 44px);
+
+        svg {
+            height: 120px;
+        }
+    }
+
+    .info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: #323131;
+    }
+    
+    hr {
+        border: 1px dashed #D3D3D3;
+        width: calc(100% + 44px);
+        margin: 0;
+    }
+    
+}
