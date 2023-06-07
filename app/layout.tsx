@@ -1,4 +1,5 @@
 import './globals.scss'
+import '../public/assets/fonts/BR Firma Regular.otf'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })

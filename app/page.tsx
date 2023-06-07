@@ -3,10 +3,12 @@ import Link from 'next/link'
 import style from "../styles/Home.module.scss"
 import useEventbrite from 'react-eventbrite-popup-checkout';
 import { useCallback } from 'react';
-
+import { useRouter } from 'next/navigation';
 export default function Home() {
+
+  const router = useRouter()
   const handleOrderCompleted = useCallback(() => {
-    console.log('Order was completed successfully');
+    router.push('/login')
   }, []);
 
   const modalButtonCheckout = useEventbrite({

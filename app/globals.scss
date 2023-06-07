@@ -1,4 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/br-firma');
+@font-face {
+  font-family: "Br Firma";   /*Can be any text*/
+  src: url("/assets/fonts/BR Firma Regular.otf") format("truetype");
+}
+
 :root {
   --primary_color: #FFC533;
   color: #222222;
