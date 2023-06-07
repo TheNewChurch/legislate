@@ -9,7 +9,7 @@ export default function Home() {
 
             <div className={`page-container ${style.landingPage}`}>
               <h2 className={`text-white ${style.welcomeText}`}>Welcome to The Next Conference 2023</h2>
-              <Link href={"/login"}> <button className='btn'>Scan Qr</button></Link>
+              <Link href={"/login"}> <button className='btn'>Sign In</button></Link>
             </div>
       </div>
     </main>

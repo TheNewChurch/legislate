@@ -1,9 +1,7 @@
 import style from '../../styles/Login.module.scss'
-import Link from 'next/link';
 import { useState } from 'react';
-import { isTemplateMiddle } from 'typescript';
-import { barcodeStructure, loginFunction } from '@/types';
-import postcss from 'postcss';
+import { loginFunction } from '@/types';
+
 type props= {
     onSuccessful: loginFunction
 }
