@@ -24,7 +24,7 @@ export default function Home() {
               <Link href={"/login"}> <button className='btn'>Sign In</button></Link>
               {modalButtonCheckout && (
                 <button id={modalButtonCheckout.id} className='btn'>
-                  SignUp
+                  Sign Up
                 </button>
               )}
             </div>
