@@ -1,10 +1,11 @@
 import style from '../../styles/LoginSuccess.module.scss'
 import QrCode from "react-qr-code"
 type props = {
-    barcode:string
+    barcode:string,
+    name:string
 }
 
-export default function LoginPin({barcode=""} : props) {
+export default function LoginPin({barcode="",name=""} : props) {
     return (
         <div className='page-container padding-0'>
             <div className={style.loginSuccess} >
@@ -13,6 +14,7 @@ export default function LoginPin({barcode=""} : props) {
                     <h1 className={style.pageHeader}>Welcome Legislator</h1>
                     <p className={style.headerSubtitle}>We found your ticket</p>
                 </div>
+                <p>{name}</p>
                 <div className={style.pinContainer}>
                     <QrCode value={barcode} style={{ height: "120px", maxWidth: "100%", width: "100%" }}/>
                 </div>

@@ -19,12 +19,12 @@ export default function LoginForm({onSuccessful}:props){
 
     async function submit(){
         
-        const url = `https://www.eventbriteapi.com/v3/events/632007019007/orders/?expand=attendees&only_emails=${email}`
         setErrorMessage({
             message: '',
             showSignUp: false
         })
-        if(!isLoading) {
+        if(!isLoading && email.length > 0) {
+            const url = `https://www.eventbriteapi.com/v3/events/632007019007/orders/?expand=attendees&only_emails=${email.toLocaleLowerCase()}`
             
             try {
                 setIsLoading(true)
@@ -39,6 +39,7 @@ export default function LoginForm({onSuccessful}:props){
     
                 if(orders) {
                     const {
+                        name="",
                         attendees: [
                             {
                                 barcodes : [
@@ -51,7 +52,7 @@ export default function LoginForm({onSuccessful}:props){
                     }  = orders.find((item:{email:string,id:string})=>item.email === email) || {}
     
                     if(barcode) {    
-                          onSuccessful({success:true,barcode})
+                          onSuccessful({success:true,barcode,name})
                           return;
                     }
                 }
@@ -68,12 +69,16 @@ export default function LoginForm({onSuccessful}:props){
                 
                 
                 setErrorMessage(prev=>({...prev,message: "there is an error fetching your data please try again later"}))
-                console.log(e)
             }
         }
         
         
         
+    }
+
+    function setEmailValue({target} : {target:{value:string}}){
+        const value = target?.value.toLowerCase() || ""
+        setEmail(value)
     }
 
     return (
@@ -88,7 +93,7 @@ export default function LoginForm({onSuccessful}:props){
                 <div className={style.loginForm}>
                     <div className='formGroup'>
                         <label htmlFor="email" className='formGroup-label'>Email Address</label>
-                        <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} name='email' className="form-default" />
+                        <input type="text" value={email} onChange={setEmailValue} name='email' className="form-default" />
                     </div>     
                     <span className='formHints'>This should be the email you used to purchase your ticket</span>
                 </div>

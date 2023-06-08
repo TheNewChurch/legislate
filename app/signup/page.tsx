@@ -3,6 +3,7 @@ import useEventbrite from 'react-eventbrite-popup-checkout';
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import style from '../../styles/Signup.module.scss';
+import Image from 'next/image';
 
 export default function SignUp() {
     const router = useRouter()
@@ -22,7 +23,7 @@ export default function SignUp() {
             <div className='container'>
                 <div className="imgBackground">
                     <div className="imageWithLogo">
-                        <img src="/assets/images/legistlate-background.jpeg" alt="legistlate" />
+                        <Image src="/assets/images/legistlate-background.jpeg" alt="legislate" width="640" height="584" />
                         <img src="/assets/images/legistlate-logo.svg" alt="legislate logo" className="svg-logo" />
                     </div>    
                 </div>
